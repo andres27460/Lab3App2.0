@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/login_Fragment">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.jaxi.Login_Fragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_login_Fragment"
+            app:destination="@id/login_Fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/login_Fragment"
+        android:name="com.example.jaxi.Login_Fragment"
+        android:label="fragment_login_"
+        tools:layout="@layout/fragment_login_" >
+        <action
+            android:id="@+id/action_login_Fragment_to_register_fragment"
+            app:destination="@id/register_fragment" />
+        <action
+            android:id="@+id/action_login_Fragment_to_seleccion_fragment"
+            app:destination="@id/seleccion_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_fragment"
+        android:name="com.example.jaxi.Register_fragment"
+        android:label="fragment_register_fragment"
+        tools:layout="@layout/fragment_register_fragment" >
+        <action
+            android:id="@+id/action_register_fragment_to_login_Fragment"
+            app:destination="@id/login_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seleccion_fragment"
+        android:name="com.example.jaxi.Seleccion_fragment"
+        android:label="fragment_seleccion_fragment"
+        tools:layout="@layout/fragment_seleccion_fragment" >
+        <action
+            android:id="@+id/action_seleccion_fragment_to_conductor_fragment"
+            app:destination="@id/conductor_fragment" />
+        <action
+            android:id="@+id/action_seleccion_fragment_to_pasajero_Fragment"
+            app:destination="@id/pasajero_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/conductor_fragment"
+        android:name="com.example.jaxi.Conductor_fragment"
+        android:label="fragment_conductor_fragment"
+        tools:layout="@layout/fragment_conductor_fragment" >
+        <action
+            android:id="@+id/action_conductor_fragment_to_monedero_Fragment"
+            app:destination="@id/monedero_Fragment" />
+        <action
+            android:id="@+id/action_conductor_fragment_to_calificaciones_Fragment2"
+            app:destination="@id/calificaciones_Fragment2" />
+        <action
+            android:id="@+id/action_conductor_fragment_to_map_Conductor_Fragment"
+            app:destination="@id/map_Conductor_Fragment" />
+        <action
+            android:id="@+id/action_conductor_fragment_to_login_Fragment"
+            app:destination="@id/login_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pasajero_Fragment"
+        android:name="com.example.jaxi.Pasajero_Fragment"
+        android:label="fragment_pasajero_"
+        tools:layout="@layout/fragment_pasajero_" >
+        <action
+            android:id="@+id/action_pasajero_Fragment_to_map_Pasajero_Fragment"
+            app:destination="@id/map_Pasajero_Fragment" />
+        <action
+            android:id="@+id/action_pasajero_Fragment_to_login_Fragment"
+            app:destination="@id/login_Fragment" />
+        <action
+            android:id="@+id/action_pasajero_Fragment_to_calificaciones2"
+            app:destination="@id/calificaciones2" />
+        <action
+            android:id="@+id/action_pasajero_Fragment_to_monedero2"
+            app:destination="@id/monedero2" />
+    </fragment>
+    <fragment
+        android:id="@+id/monedero_Fragment"
+        android:name="com.example.jaxi.Monedero_Fragment"
+        android:label="fragment_monedero"
+        tools:layout="@layout/fragment_monedero" >
+        <action
+            android:id="@+id/action_monedero_Fragment_to_conductor_fragment"
+            app:destination="@id/conductor_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calificaciones_Fragment2"
+        android:name="com.example.jaxi.Calificaciones_Fragment"
+        android:label="fragment_calificaciones"
+        tools:layout="@layout/fragment_calificaciones" >
+        <action
+            android:id="@+id/action_calificaciones_Fragment2_to_conductor_fragment"
+            app:destination="@id/conductor_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/map_Conductor_Fragment"
+        android:name="com.example.jaxi.Map_Conductor_Fragment"
+        android:label="fragment_map__conductor"
+        tools:layout="@layout/fragment_map__conductor" >
+        <action
+            android:id="@+id/action_map_Conductor_Fragment_to_conductor_fragment"
+            app:destination="@id/conductor_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/map_Pasajero_Fragment"
+        android:name="com.example.jaxi.Map_Pasajero_Fragment"
+        android:label="fragment_map_pasajero"
+        tools:layout="@layout/fragment_map_pasajero" >
+        <action
+            android:id="@+id/action_map_Pasajero_Fragment_to_pasajero_Fragment"
+            app:destination="@id/pasajero_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calificaciones2"
+        android:name="com.example.jaxi.calificaciones2"
+        android:label="fragment_calificaciones2"
+        tools:layout="@layout/fragment_calificaciones2" >
+        <action
+            android:id="@+id/action_calificaciones2_to_pasajero_Fragment"
+            app:destination="@id/pasajero_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/monedero2"
+        android:name="com.example.jaxi.Monedero2"
+        android:label="fragment_monedero2"
+        tools:layout="@layout/fragment_monedero2" >
+        <action
+            android:id="@+id/action_monedero2_to_pasajero_Fragment"
+            app:destination="@id/pasajero_Fragment" />
+    </fragment>
+</navigation>
